@@ -1,6 +1,6 @@
-# The Parent_Child_Details api has a web view from where all the endpoints can be accessed.
+# The Parent_Child_Details api 
 
-http://localhost:8080/Welcome
+It has a web view from where all the endpoints can be accessed - http://localhost:8080/Welcome
 
 The endpoints are -
 
