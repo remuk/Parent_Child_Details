@@ -7,5 +7,6 @@ The endpoints are -
 1. /house/{parentName}
 2. /child/info/{childName}
 3. /color/{childName}
+4. /persons/children
 
 The API will load some sample data from Application.class
