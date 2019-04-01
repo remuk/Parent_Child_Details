@@ -50,8 +50,8 @@ public class TestRestApiController {
     @Test
     public void testgetHouseDetails() throws Exception {
 
-        Parent parent = new Parent("Prateek",31);
-        parent.setHouse(new House("paschim vihar","110063", HouseType.HOUSE));
+        Parent parent = new Parent("John",31);
+        parent.setHouse(new House("Dahlem","14195", HouseType.HOUSE));
 
         List<Parent> parents = new ArrayList<>();
         parents.add(parent);
@@ -59,10 +59,10 @@ public class TestRestApiController {
         when(houseListingService.getHouseDetailsByParentname(anyString())).thenReturn(parents);
 
         mockMvc.perform(
-                MockMvcRequestBuilders.get("/house/Prateek"))
+                MockMvcRequestBuilders.get("/house/John"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
-                .andExpect(jsonPath("$.Address").value("paschim vihar"));
+                .andExpect(jsonPath("$.Address").value("Dahlem"));
     }
 
     /*
@@ -71,9 +71,9 @@ public class TestRestApiController {
     @Test
     public void testgetChildMealDetails() throws Exception {
 
-        Parent parent = new Parent("Prateek",31);
+        Parent parent = new Parent("John",31);
         Child daughter = new Daughter("Freya",2,"Pink");
-        Meal meal1 = new Meal("Maggie",new Date());
+        Meal meal1 = new Meal("Noodles",new Date());
         Set<Meal> mealSet = new LinkedHashSet<>();
         mealSet.add(meal1);
         daughter.setParent(parent);
@@ -88,8 +88,8 @@ public class TestRestApiController {
                 MockMvcRequestBuilders.get("/child/info/Freya"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
-                .andExpect(jsonPath("$.Parent_Name").value("Prateek"))
-                .andExpect(jsonPath("$.Favourite_Meal").value("Maggie"));
+                .andExpect(jsonPath("$.Parent_Name").value("John"))
+                .andExpect(jsonPath("$.Favourite_Meal").value("Noodles"));
     }
 
     /*
@@ -98,13 +98,7 @@ public class TestRestApiController {
     @Test
     public void testgetChildColorDetails() throws Exception {
 
-        Parent parent = new Parent("Prateek",31);
         Child daughter = new Daughter("Freya",2,"Pink");
-        Meal meal1 = new Meal("Maggie",new Date());
-        Set<Meal> mealSet = new LinkedHashSet<>();
-        mealSet.add(meal1);
-        daughter.setParent(parent);
-        daughter.setMeal(mealSet);
 
         List<Child> childList = new ArrayList<>();
         childList.add(daughter);

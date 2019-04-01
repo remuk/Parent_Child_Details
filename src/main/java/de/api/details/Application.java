@@ -49,9 +49,9 @@ public class Application extends SpringBootServletInitializer
 
         //creating a parent instance
 
-        Parent parent = new Parent("Prateek",31);
+        Parent parent = new Parent("John",31);
 
-        House house = new House("paschim vihar","110063", HouseType.HOUSE);
+        House house = new House("Dahlem","14195", HouseType.HOUSE);
 
         Child daughter = new Daughter("Freya",2,"Pink");
         Child son = new Son("Treya",1,"Blue");
@@ -60,8 +60,8 @@ public class Application extends SpringBootServletInitializer
         childSet.add(daughter);
         childSet.add(son);
 
-        Meal meal1 = new Meal("Maggie",new Date());
-        Meal meal2 = new Meal("Uncle Chips",new Date());
+        Meal meal1 = new Meal("Noodles",new Date());
+        Meal meal2 = new Meal("Chips",new Date());
 
         Meal meal3 = new Meal("Chocolate",new Date());
         Meal meal4 = new Meal("Ice Cream",new Date());
