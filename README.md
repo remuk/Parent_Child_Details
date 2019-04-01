@@ -14,7 +14,7 @@ prerequisite - create mysql database name - parent_child_db
 
 run the api
 -------------
-1.mvn clean install
+1.mvn clean install <br/>
 2.mvn spring-boot:run
 
 --------------------------------------------
