@@ -1,3 +1,4 @@
+de/api/details/repository/ParentSummaryRepository.class
 de/api/details/service/HouseListingService.class
 de/api/details/model/House.class
 de/api/details/repository/ChildRepository.class
@@ -15,4 +16,5 @@ de/api/details/service/ChildListingServiceImpl.class
 de/api/details/repository/MealRepository.class
 de/api/details/model/HouseType.class
 de/api/details/model/Son.class
+de/api/details/model/ParentSummary.class
 de/api/details/service/HouseListingServiceImpl.class

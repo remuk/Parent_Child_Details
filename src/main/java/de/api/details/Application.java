@@ -27,6 +27,9 @@ public class Application extends SpringBootServletInitializer
     @Autowired
     private MealRepository mealRepository;
 
+    @Autowired
+    private ParentSummaryRepository parentSummaryRepository;
+
 
     @Override
     protected SpringApplicationBuilder configure(
@@ -96,6 +99,10 @@ public class Application extends SpringBootServletInitializer
 
         parentRepository.save(parent);
 
+        ParentSummary parentSummary = new ParentSummary();
+        parentSummaryRepository.save(parentSummary);
+
 
     }
+
 }

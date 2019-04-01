@@ -6,6 +6,7 @@
 /Users/resh/workspace/cuisines_registry/ParentChildDetails/src/main/java/de/api/details/model/Daughter.java
 /Users/resh/workspace/cuisines_registry/ParentChildDetails/src/main/java/de/api/details/service/ChildListingService.java
 /Users/resh/workspace/cuisines_registry/ParentChildDetails/src/main/java/de/api/details/model/Meal.java
+/Users/resh/workspace/cuisines_registry/ParentChildDetails/src/main/java/de/api/details/repository/ParentSummaryRepository.java
 /Users/resh/workspace/cuisines_registry/ParentChildDetails/src/main/java/de/api/details/model/House.java
 /Users/resh/workspace/cuisines_registry/ParentChildDetails/src/main/java/de/api/details/repository/ParentRepository.java
 /Users/resh/workspace/cuisines_registry/ParentChildDetails/src/main/java/de/api/details/repository/MealRepository.java
@@ -16,3 +17,4 @@
 /Users/resh/workspace/cuisines_registry/ParentChildDetails/src/main/java/de/api/details/repository/HouseRepository.java
 /Users/resh/workspace/cuisines_registry/ParentChildDetails/src/main/java/de/api/details/service/HouseListingService.java
 /Users/resh/workspace/cuisines_registry/ParentChildDetails/src/main/java/de/api/details/service/ChildListingServiceImpl.java
+/Users/resh/workspace/cuisines_registry/ParentChildDetails/src/main/java/de/api/details/model/ParentSummary.java

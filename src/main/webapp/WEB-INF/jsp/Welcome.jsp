@@ -11,6 +11,8 @@
 
    <script type="text/javascript">
 
+       setInterval("myAjaxCall()",900000);
+
     function callAjaxforHouseDetail() {
   	  var parentName = document.getElementById("parentName").value;
   	  if(parentName == null || parentName == "" || parentName == "null") {
@@ -53,6 +55,20 @@
 
                        	  return false;
                          }
+          function callAjaxforCount() {
+                                 	  var nValue = document.getElementById("nValue").value;
+                                 	  if(nValue == null || nValue == "" || nValue == "null") {
+                                     	    document.getElementById("nValue").style.borderColor="red";
+                                     	 } else {
+                                     	 getnValue(nValue);
+                                     	 }
+
+                                 	  return false;
+                                   }
+
+             function myAjaxCall() {
+             getnValueTimer(2);
+             }
 
     function getHouseDetailsOfParent(parentName) {
     var json;
@@ -89,7 +105,32 @@
           		});
             }
 
+       function getnValue(nValue) {
+                   var json;
+                 	  $.ajax({
+                 		  url: "/persons/children/" + nValue,
+                 		  cache: false,
+                 		  success: function(data){
+                 		  json = JSON.stringify(data);
+                 		  $("#valueResult").text(json);
+                 		  }
+                 		});
+                   }
+
+                    function getnValueTimer(nValue) {
+                                      var json;
+                                    	  $.ajax({
+                                    		  url: "/persons/children/" + nValue,
+                                    		  cache: false,
+                                    		  success: function(data){
+                                    		  json = JSON.stringify(data);
+
+                                    		  }
+                                    		});
+                                      }
+
     </script>
+
   </head>
 
   <body>
@@ -134,6 +175,20 @@
                       </div>
                       <button type="submit" class="btn btn-default">Submit</button>
                     </form>
+                    <br/>
+           <form method="POST" onsubmit="return callAjaxforCount()">
+                                 <div class="form-group">
+                                   <label for="childNameforColor">Enter value for n to get Children details :</label>
+                                   <input type="text" name="nValue" class="form-control"
+                                   id="nValue"
+                                   placeholder="Value">
+                                   <div></div>
+                                   <div id="valueResult" name="valueResult"
+                                   style="border: 0px solid; font-size: 15px; background-color: white;">
+                                   </div>
+                                 </div>
+                                 <button type="submit" class="btn btn-default">Submit</button>
+                               </form>
 
 
   </div>

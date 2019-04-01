@@ -79,5 +79,23 @@ public class RestAPIController {
 
     }
 
+    @RequestMapping("/persons/children/{n}")
+    public Map<String,String> fetchCountOfChildren(@PathVariable("n") String nValue) {
+
+
+        Integer valueTopass = nValue !=null ?
+                Integer.parseInt(nValue) : null;
+
+       Integer result = childListingService.fetchCountOfChildren(valueTopass);
+
+       Map<String,String> resultToReturn = new HashMap<>();
+
+       resultToReturn.put("amountOfPerson",result.toString());
+       resultToReturn.put("amountOfChildren",nValue);
+
+
+        return resultToReturn;
+
+    }
 
 }
