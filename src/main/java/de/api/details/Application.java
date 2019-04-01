@@ -54,7 +54,7 @@ public class Application extends SpringBootServletInitializer
 
         Parent parent = new Parent("John",31);
 
-        House house = new House("Dahlem","14195", HouseType.HOUSE);
+            House house = new House("Dahlem","14195", HouseType.HOUSE);
 
         Child daughter = new Daughter("Freya",2,"Pink");
         Child son = new Son("Treya",1,"Blue");
