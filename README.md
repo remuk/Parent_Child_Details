@@ -12,7 +12,15 @@ The endpoints are -
 
 prerequisite - create mysql database name - parent_child_db 
 
+run the api
+-------------
+mvn clean install
+mvn spring-boot:run
+
+--------------------------------------------
+
 The API will load some sample data from Application.class
+-----------------------------------------------------------
 
 Example - Querying with these will provide results. else need to create data manually in database.
 
